@@ -1,10 +1,13 @@
-﻿<!Doctype html>
+<!Doctype html>
 <html>
 <head>
 	<title>Menu CSS jQuery</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 	<meta charset="utf-8">
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	
+    <script>
 	$(document).ready(function(){
 		$('#menu ul li').prepend('<span></span>');
 			$('#menu ul li').each(function(){
@@ -39,29 +42,58 @@
 			}
 		#menu ul li{float:left;
 			}
-		#menu ul li a, #menu ul li span{width:100px;
+		#menu ul li a, #menu ul li span{
+			width:100px;
 			padding:10px 20px;
 			height:18px;
 			color:#FFFFFF;
-			/*background:url("images/Degrade_img.jpg") repeat-x; */
+			background:url("Degrade_img.jpg") repeat-x;
             background:red;
 			text-decoration:none;
 			overflow:hidden;
 			text-align:center;
 			}
 		#menu ul li span{
-			display:block;
+			display:block; 
 			cursor:pointer;
 			}
 		#menu ul li a{
 			float:left;
-			background:url("images/Degrade_img.jpg") repeat-x left bottom;
+			background:url("Degrade_img.jpg") repeat-x left bottom;
 			color:#000000;
             height:10px;
 			}
+			
+			/*aqui jaz matheus*/
+			header, main, footer {
+		      padding-left: 300px;
+		    }
+		
+		    @media only screen and (max-width : 992px) {
+		      header, main, footer {
+		        padding-left: 0;
+		      }
+		    }
 	</style>
 </head>
 <body>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js">
+				// Initialize collapse button
+				  $(".button-collapse").sideNav();
+				  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+				  //$('.collapsible').collapsible();
+				  $('.button-collapse').sideNav({
+				      menuWidth: 300, // Default is 240
+				      edge: 'right', // Choose the horizontal origin
+				      closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+				    }
+				  );
+				  // Show sideNav
+				  $('.button-collapse').sideNav('show');
+				  // Hide sideNav
+				  $('.button-collapse').sideNav('hide');
+	</script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
 	<div id="menu">
 		<ul>
 			<li><a href="#">Home</a></li>

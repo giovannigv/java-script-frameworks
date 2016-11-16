@@ -27,12 +27,16 @@
 	</script>
 
 	<style>
-		body{background:black;
+		body{
+			background:black;
 			}
-		#menu{width:700px;
+		#menu{
+			width:700px;
 			margin:auto;
-           	}
-		#menu ul{list-style:none;
+		}
+           	
+		#menu ul {
+			list-style:none;
 			font-size:18px;
 			font-family:"Hobo Std";
 			margin:0px;
@@ -40,7 +44,8 @@
 			height:40px;
 			overflow:hidden;
 			}
-		#menu ul li{float:left;
+		#menu ul li{
+			float:left;
 			}
 		#menu ul li a, #menu ul li span{
 			width:100px;
@@ -64,7 +69,6 @@
             height:10px;
 			}
 			
-			/*aqui jaz matheus*/
 			header, main, footer {
 		      padding-left: 300px;
 		    }
@@ -74,6 +78,80 @@
 		        padding-left: 0;
 		      }
 		    }
+		    
+		    @media only screen and (max-width: 768px){
+		    	#menu ul {
+			list-style:none;
+			font-size:18px;
+			font-family:"Hobo Std";
+			margin:10px;
+			padding:10px;
+			height:300px;
+			overflow:hidden;
+			}
+		#menu ul li a, #menu ul li span{
+			width:100px;
+			padding:10px 20px;
+			height:20px;
+			color:#FFFFFF;
+			background:url("Degrade_img.jpg") repeat-x;
+            background:red;
+			text-decoration:none;
+			overflow:hidden;
+			text-align:center;
+			}
+		#menu ul li span{
+			display:block; 
+			}
+		#menu ul li a{
+			float:right;
+			background:url("Degrade_img.jpg") repeat-x left bottom;
+			color:#000000;
+            height:10px;
+			}
+			
+			header, main, footer {
+		      padding-left: 300px;
+		    }
+		    }
+		    @media only screen and (max-width: 425px){
+		    	#menu ul li{
+			float:right;
+			}	
+		#menu ul {
+			list-style:none;
+			font-size:18px;
+			font-family:"Hobo Std";
+			margin:10px;
+			padding:10px;
+			height:300px;
+			overflow:hidden;
+			}
+		#menu ul li a, #menu ul li span{
+			width:90px;
+			padding:10px 20px;
+			height:20px;
+			color:#FFFFFF;
+			background:url("Degrade_img.jpg") repeat-x;
+            background:grey;
+			text-decoration:none;
+			overflow:hidden;
+			text-align:center;
+			}
+		#menu ul li span{
+			display:block; 
+			}
+		#menu ul li a{
+			
+			background:url("Degrade_img.jpg") repeat-x left bottom;
+			color:#000000;
+            height:10px;
+			}
+			
+			header, main, footer {
+		      padding-left: 300px;
+		    }
+		  }
 	</style>
 </head>
 <body>
@@ -92,6 +170,13 @@
 				  $('.button-collapse').sideNav('show');
 				  // Hide sideNav
 				  $('.button-collapse').sideNav('hide');
+				  
+				  //Tarefas
+				  $(document).ready(function () {
+					$(a).css('color','blue');
+					$('#menu').animate({left: '250px'})
+				  	
+				  })
 	</script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
 	<div id="menu">
